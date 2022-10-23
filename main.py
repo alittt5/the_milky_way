@@ -10,8 +10,8 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 today = datetime.now()
 city = os.environ['CITY']
 
-start_date = "08/11/2018"
-birthday = "02/06"
+start_date = "2022-06-06"
+birthday = "05-20"
 # 微信公众测试号ID和SECRET
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
@@ -41,18 +41,18 @@ def get_weather():
 
 # 当前城市、日期
 def get_city_date():
-    return city, today.date().strftime("%m/%d/%y")
+    return city, today.date().strftime("%Y-%m-%d")
 
 
 # 距离设置的日期过了多少天
 def get_count():
-    delta = today - datetime.strptime(start_date, "%m/%d/%y")
+    delta = today - datetime.strptime(start_date, "%Y-%m-%d")
     return delta.days
 
 
 # 距离过生日还有多少天
 def get_birthday():
-    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%m/%d/%y")
+    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
     if next < datetime.now():
         next = next.replace(year=next.year + 1)
     return (next - today).days
