@@ -46,13 +46,13 @@ def get_city_date():
 
 # 距离设置的日期过了多少天
 def get_count():
-    delta = today - datetime.strptime(start_date, "%Y-%m-%d")
+    delta = today - datetime.strptime(start_date, "%m/%d/%y")
     return delta.days
 
 
 # 距离过生日还有多少天
 def get_birthday():
-    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
+    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%m/%d/%y")
     if next < datetime.now():
         next = next.replace(year=next.year + 1)
     return (next - today).days
