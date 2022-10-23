@@ -10,8 +10,8 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 today = datetime.now()
 city = os.environ['CITY']
 
-start_date = "2022-06-06"
-birthday = "05-20"
+start_date = "2018-08-11"
+birthday = "02-06"
 # 微信公众测试号ID和SECRET
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
