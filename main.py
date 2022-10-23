@@ -11,7 +11,7 @@ today = datetime.now()
 city = os.environ['CITY']
 
 start_date = "08/11/2018"
-birthday = "02/06/2000"
+birthday = "02/06"
 # 微信公众测试号ID和SECRET
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
